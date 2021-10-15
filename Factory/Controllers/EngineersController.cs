@@ -88,12 +88,11 @@ namespace Factory.Controllers
         _db.Licenses.Add(new Licenses() {MachineId = MachineId, EngineerId = engineer.EngineerId});
       }
       _db.SaveChanges();
-      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return RedirectToAction("Index");
       }
     
     [HttpPost]
-    public ActionResult DeleteMachine(int joinId, int EngineerId)
+    public ActionResult DeleteMachine(int joinId, int EngineerId, int id)
     {
       var joinEntry = _db.Licenses.FirstOrDefault(entry => entry.LicensesId == joinId);
       _db.Licenses.Remove(joinEntry);

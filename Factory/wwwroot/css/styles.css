@@ -55,3 +55,16 @@ div#navBar {
   width:40%;
   padding: 0 10%;
 }
+.noButton {
+  background: transparent;
+  border: 0px transparent;
+  color:#007bff;
+}
+
+.noButton:hover {
+  color:crimson;
+}
+
+a:hover {
+text-decoration: none;
+}
