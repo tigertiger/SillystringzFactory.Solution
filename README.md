@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="Factory/wwwroot/img/splash.png">  
+</p>
 # Dr. Sillystringz & the Great Broken Factory
 
 #### Let's not have any Staplerfahrer Klaus incidents this month, boys
@@ -11,14 +14,18 @@
 ## Technologies Used
 
 * _C#_
-* _.NET 5_
 * _NuGet_
+* _.NET 5_
 * _ASP.NET Core_
 * _Entity Framework_
 
 ## Description
 
-_Describ_
+_Well, you've never seen a factory like this before! Let me tell ya. This place is more fun than Mr. Wonka's famous chocolate factory!_  
+
+_Trouble is, everything's breaking all the time. So, this little web app—made with C# & Entity Framework—was designed to coordinate all the fixin' what needs doin' around here._  
+
+_Just sign your engineers up, track which machines they're licensed to tinker around with, and kick your feet up on that big manager's desk of yours. Slurp some coffee, call your mama, we've got you covered._
 
 
 ## Instructions
@@ -53,6 +60,7 @@ _Describ_
   - Under Default Schema to be Imported To, select New and enter melissa_schatzmiller as the name of the database. Click Ok!
   - Navigate to the Import Progress tab and click Start Import at the bottom right of the window
   - After finishing the steps above, reopen Navigator > Schemas. Right click and select Refresh All. The melissa_schatzmiller database should appear.  
+  - If you'd like to make use of the included database Migrations, simply run ```dotnet ef database update``` in your Factory/Factory folder
 
 * Return to Factory in your text editor
 * Restore and build the project:
