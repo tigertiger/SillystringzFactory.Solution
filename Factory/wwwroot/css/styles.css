@@ -21,7 +21,7 @@ div#footer {
   padding:8px;
 }
 
-div#header {
+div#navBar {
   position:fixed;
   top:0px;
   left:0px;
@@ -29,6 +29,16 @@ div#header {
   color:#CCC;
   background:#333;
   padding:8px;
+}
+
+#header {
+  background-image: url("/../../img/rock-n-roll-monkey-R4WCbazrD1g-unsplash.jpeg");
+  background-size: cover;
+  background-position: 0 15%;
+  width:100%;
+  position:inherit;
+  padding:3%;
+  text-align:left;
 }
 
 .column {
