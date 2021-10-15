@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models
+@model Factory.Models.Engineer
+
+<div class="container">
+
+<h1>@Model.Name</h1>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>This Engineer is Not Licensed on Any Machines</p>
+}
+else
+{
+  <p>This Engineer is Licensed on the Following Machines</p>
+  <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>@join.Machine.Model</li>
+    }
+  </ul>
+}
+</div>
