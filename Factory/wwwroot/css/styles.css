@@ -68,3 +68,7 @@ div#navBar {
 a:hover {
 text-decoration: none;
 }
+
+.form-control {
+  width: fit-content;
+}

@@ -9,7 +9,7 @@
   @using (Html.BeginForm())
   {
     @Html.LabelFor(model => model.Model)<br />
-    @Html.TextBoxFor(model => model.Model)<br/>
+    @Html.TextBoxFor(model => model.Model, new {@class = "form-control", placeholder= "Engineer Name", required="required"})<br/>
 
     @Html.LabelFor(model => model.Condition)<br />
     @Html.TextBoxFor(model => model.Condition)<br/><br />

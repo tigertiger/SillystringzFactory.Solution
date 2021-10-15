@@ -12,7 +12,7 @@
   @Html.HiddenFor(model => model.MachineId)
 
   @Html.LabelFor(model => model.Model)
-  @Html.EditorFor(model => model.Model)<br/>
+  @Html.EditorFor(model => model.Model, new {@class = "form-control", placeholder= "Engineer Name", required="required"})<br/>
 
   @Html.LabelFor(model => model.Condition)<br />
   @Html.EditorFor(model => model.Condition)<br/><br />
