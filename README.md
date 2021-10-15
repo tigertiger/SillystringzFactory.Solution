@@ -1,15 +1,9 @@
-<p align="center">
-  <img src="Factory/wwwroot/img/splash.png">  
-</p>
+<p align="center"><img src="Factory/wwwroot/img/splash.png"></p>  
+
 # Dr. Sillystringz & the Great Broken Factory
+### Let's not have any [Staplerfahrer Klaus](https://youtu.be/ChOHnSL7ZCg) incidents this month, boys.  
+<p style="padding-bottom:20px;"></p>
 
-#### Let's not have any [Staplerfahrer Klaus](https://youtu.be/ChOHnSL7ZCg) incidents this month, boys
-
-#### Melissa Schatz-Miller
-
-<p align="center">
-  <img src="Factory/wwwroot/img/relationshipSchema.png">  
-</p>
 
 ## Technologies Used
 
@@ -25,8 +19,11 @@ _Well, you've never seen a factory like this before! Let me tell ya. This place 
 
 _Trouble is, everything's breaking all the time. So, this little web app—made with C# & Entity Framework—was designed to coordinate all the fixin' what needs doin' around here._  
 
-_Just sign your engineers up, track which machines they're licensed to tinker around with, and kick your feet up on that big manager's desk of yours. Slurp some coffee, call your mama, we've got you covered._
+_Just sign your engineers up, track which machines they're licensed to tinker around with, and kick your feet up on that big manager's desk of yours. Slurp some coffee, call your mama; we've got you covered._
 
+<p align="center" style="padding-top:30px; padding-bottom:30px;">
+  <img src="Factory/wwwroot/img/relationshipSchema.png" width="350px">  
+</p>  
 
 ## Instructions
 
