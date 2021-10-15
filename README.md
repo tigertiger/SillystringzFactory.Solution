@@ -5,7 +5,7 @@
 #### Melissa Schatz-Miller
 
 <p align="center">
-  <img src="SCHEMA IMG">  
+  <img src="Factory/wwwroot/img/relationshipSchema.png">  
 </p>
 
 ## Technologies Used
