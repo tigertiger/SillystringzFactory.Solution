@@ -22,5 +22,24 @@ namespace Factory.Controllers
       List<Machine> sorted = _db.Machines.ToList().OrderBy(machine => machine.Model).ToList();
       return View(sorted);
     }
+
+    public ActionResult Create()
+    {
+      ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Machine machine, int EngineerId)
+    {
+      _db.Machines.Add(machine);
+      _db.SaveChanges();
+      if(EngineerId != 0)
+      {
+        _db.Licenses.Add(new Licenses() {EngineerId = EngineerId, MachineId = machine.MachineId});
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
