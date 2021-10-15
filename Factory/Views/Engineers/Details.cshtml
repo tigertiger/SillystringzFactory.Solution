@@ -8,6 +8,24 @@
 <div class="container">
 
 <h1>@Model.Name</h1>
+<p>
+  @if (@Model.Level == 1) {
+  <em>Don't trust this guy</em><br />
+  <span>Level 1</span>
+  }
+  @if (@Model.Level == 2) {
+  <em>Can probably fix it</em><br />
+  <span>Level 2</span>
+  }
+  @if (@Model.Level == 3) {
+  <em>Look at Dr. Wrench-Hands over here</em><br />
+  <span>Level 3</span>
+  }
+  @if (@Model.Level == 4) {
+  <em>A real Machine Jerk</em><br />
+  <span>Level 4</span>
+  }
+</p>
 
 @if (@Model.JoinEntities.Count == 0)
 {

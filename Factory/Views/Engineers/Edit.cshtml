@@ -12,10 +12,13 @@
   @Html.HiddenFor(model => model.EngineerId)
 
   @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)<br/>
+  @Html.EditorFor(model => model.Name)<br/><br />
 
-  @Html.Label("Add Machine License")<br />
-  @Html.DropDownList("MachineId")<br /><br />
+  @Html.Label("How skilled is this engineer?")<br />
+  @Html.RadioButtonFor(model => model.Level, 1)<span> Don't trust this guy</span><br />
+  @Html.RadioButtonFor(model => model.Level, 2)<span> They can probably fix it</span><br />
+  @Html.RadioButtonFor(model => model.Level, 3)<span> Look at Dr. Wrench-Hands over here</span><br />
+  @Html.RadioButtonFor(model => model.Level, 4)<span> A Real Machine Jerk</span><br /><br />
 
   <input type="submit" value="Save"/>
 }
