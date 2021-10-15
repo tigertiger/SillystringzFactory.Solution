@@ -1,6 +1,6 @@
 # Dr. Sillystringz & the Great Broken Factory
 
-#### Let's not have a Staplerfahrer Klaus incident this month, boys
+#### Let's not have any Staplerfahrer Klaus incidents this month, boys
 
 #### Melissa Schatz-Miller
 
