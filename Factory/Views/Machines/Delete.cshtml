@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+<div class="container">
+  <h2>Are you sure you want to uninstall this machine?</h2>
+  <p>Its current condition is: @Model.Condition.</p>
+
+  Alright, uninstall @Model.Model, then.
+  @using (Html.BeginForm())
+  {
+      <input type="submit" value="Do it" />
+  }
+<div>
