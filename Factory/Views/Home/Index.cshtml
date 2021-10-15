@@ -1,6 +1,20 @@
 @{
-  Layout = "_Layout";
+  Layout ="_Layout";
 }
-
 <div class="container">
+
+    <h1>Dr. Sillystringz Factory Repairery</h1>
+
+  <div class="bodyColumn">
+    <h3>Engineers</h3>
+    <p>@Html.ActionLink("View All Engineers", "Index", "Engineers")</p>
+    <p>@Html.ActionLink("Add an Engineer", "Create", "Engineers")</p>
+  </div>
+
+  <div class="bodyColumn">
+    <h3>Machines</h3>
+    <p>@Html.ActionLink("View All Machines", "Index", "Machines")</p>
+    <p>@Html.ActionLink("Add a Machine", "Create", "Machines")</p>
+  </div>
+
 </div>

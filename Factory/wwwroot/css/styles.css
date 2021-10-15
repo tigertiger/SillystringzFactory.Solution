@@ -1,6 +1,6 @@
 
 body {
-font-family: 'Dosis', sans-serif;
+font-family: 'Courier New', Courier, monospace;
 }
 
 .container {
@@ -38,4 +38,10 @@ div#header {
 
 .column a {
   color:#fff;
+}
+
+.bodyColumn {
+  float:left;
+  width:40%;
+  padding: 0 10%;
 }
