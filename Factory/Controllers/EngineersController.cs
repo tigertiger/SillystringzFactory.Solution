@@ -81,15 +81,35 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult AddMachine(Engineer engineer, int MachineId, Machine machine, int EngineerId)
+    public ActionResult AddMachine(Engineer engineer, int MachineId, Machine machine, int EngineerId, int id)
     {
       if (MachineId != 0 && !_db.Licenses.Any(model => model.MachineId == machine.MachineId && model.EngineerId == EngineerId))
       {
         _db.Licenses.Add(new Licenses() {MachineId = MachineId, EngineerId = engineer.EngineerId});
       }
       _db.SaveChanges();
+      var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return RedirectToAction("Index");
       }
+    
+    [HttpPost]
+    public ActionResult DeleteMachine(int joinId, int EngineerId)
+    {
+      var joinEntry = _db.Licenses.FirstOrDefault(entry => entry.LicensesId == joinId);
+      _db.Licenses.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    // [HttpPost]
+    // public ActionResult DeleteMachine(int joinId, int id)
+    // {
+    //   var joinEntry = _db.Licenses.FirstOrDefault(entry => entry.LicensesId == joinId);
+    //   _db.Licenses.Remove(joinEntry);
+    //   _db.SaveChanges();
+    //   var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+    //   return View("Details", thisEngineer);
+    // } 
 
       public ActionResult Delete(int id)
       {
