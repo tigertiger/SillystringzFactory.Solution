@@ -76,17 +76,32 @@ namespace Factory.Controllers
       .Include(engineer => engineer.JoinEntities)
       .ThenInclude(join => join.Machine)
       .FirstOrDefault(engineer => engineer.EngineerId == id);
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineModel");
       return View(thisEngineer);
     }
 
     [HttpPost]
-      public ActionResult AddMachine(Engineer engineer, int MachineId, int EngineerId, Machine machine)
+    public ActionResult AddMachine(Engineer engineer, int MachineId, Machine machine, int EngineerId)
+    {
+      if (MachineId != 0 && !_db.Licenses.Any(model => model.MachineId == machine.MachineId && model.EngineerId == EngineerId))
       {
-        if (MachineId != 0 && !_db.Licenses.Any(model => model.MachineId == machine.MachineId && model.EngineerId == EngineerId))
-        {
-          _db.Licenses.Add(new Licenses() {MachineId = MachineId, EngineerId = engineer.EngineerId});
-        }
+        _db.Licenses.Add(new Licenses() {MachineId = MachineId, EngineerId = engineer.EngineerId});
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+      }
+
+      public ActionResult Delete(int id)
+      {
+        Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+        return View(thisEngineer);
+      }
+
+      [HttpPost, ActionName("Delete")]
+      public ActionResult Destroy(int id)
+      {
+        Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+        _db.Engineers.Remove(thisEngineer);
         _db.SaveChanges();
         return RedirectToAction("Index");
       }

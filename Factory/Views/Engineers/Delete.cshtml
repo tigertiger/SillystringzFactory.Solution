@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+<div class="container">
+  <h2>Are you sure you want to fire this engineer?</h2>
+  <p>They're level @Model.Level. That means: 
+    @if (@Model.Level == 1) {
+    <em>don't trust this guy</em>
+    }
+    @if (@Model.Level == 2) {
+    <em>they can probably fix it</em>
+    }
+    @if (@Model.Level == 3) {
+    <em>look at Dr. Wrench-Hands over here</em>
+    }
+    @if (@Model.Level == 4) {
+    <em>they're a real Machine Jerk</em>
+    }
+  .</p>
+
+  Go ahead, fire @Html.DisplayFor(model => model.Name)
+  @using (Html.BeginForm())
+  {
+      <input type="submit" value="Do it" />
+  }
+<div>

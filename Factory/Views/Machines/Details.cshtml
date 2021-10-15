@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models
+@model Factory.Models.Machine
+
+<div class="container">
+
+<h1>@Model.Model</h1>
+<h5>Current condition: @Model.Condition</h5>
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>No engineers are licensed to repair this machine</p>
+}
+else
+{
+  <p>The following engineers are licensed to repair this machine</p>
+  <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>@join.Engineer.Name</li>
+    }
+  </ul>
+}
+<p>@Html.ActionLink("License an Engineer on this Machine", "AddEngineer", new {id = Model.MachineId})</p>
+<p>@Html.ActionLink("Edit Machine", "Edit", new {id = Model.MachineId})</p>
+<p>@Html.ActionLink("Uninstall this Machine", "Delete", new {id = Model.MachineId})</p>
+</div>
