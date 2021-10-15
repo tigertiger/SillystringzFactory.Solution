@@ -10,9 +10,12 @@
   {
     @Html.LabelFor(model => model.Model)<br />
     @Html.TextBoxFor(model => model.Model)<br/>
+
+    @Html.LabelFor(model => model.Condition)<br />
+    @Html.TextBoxFor(model => model.Condition)<br/><br />
     
-    @Html.Label("Which Engineers are Licensed to Repair this Machine?")<br />
-    @Html.DropDownList("EngineerId")<br /><br />
+    @* @Html.Label("Which Engineers are Licensed to Repair this Machine?")<br />
+    @Html.DropDownList("EngineerId")<br /><br /> *@
     <input type="submit" value="Add Machine" />
   }
 </div>

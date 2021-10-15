@@ -10,8 +10,7 @@ namespace Factory.Models
     }
     public int MachineId {get; set;}
     public string Model {get; set;}
-    public int Year {get; set;}
-    public int Condition {get; set;}
+    public string Condition {get; set;}
     public virtual ICollection<Licenses> JoinEntities {get; set;}
   }
 }
