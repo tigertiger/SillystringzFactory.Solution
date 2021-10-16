@@ -1,0 +1,31 @@
+@{
+  Layout= "_Layout";
+}
+
+@using Factory.Models
+@model Factory.Models.Machine
+<div class="container">
+<h3>License an Engineer on @Model.Model</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+    @Html.Label("Engineer")
+    @Html.DropDownList("EngineerId")<br /><br />
+  <input type="submit" value="Add" />
+}
+
+<br />
+</p>The following engineers are already licensed on @Model.Model</p>
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.MachineId)
+  <ul>
+  @foreach (var join in Model.JoinEntities)
+  {
+    <li>@join.Engineer.Name</li>
+  }
+  </ul>
+}
+<p>@Html.ActionLink("Back to Machine's Details", "Details", new {id = Model.MachineId})</p>
+</div>

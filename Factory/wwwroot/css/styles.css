@@ -66,7 +66,7 @@ div#navBar {
 }
 
 a:hover {
-text-decoration: none;
+  text-decoration: none;
 }
 
 .form-control {

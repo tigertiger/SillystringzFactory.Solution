@@ -100,16 +100,6 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
-    // [HttpPost]
-    // public ActionResult DeleteMachine(int joinId, int id)
-    // {
-    //   var joinEntry = _db.Licenses.FirstOrDefault(entry => entry.LicensesId == joinId);
-    //   _db.Licenses.Remove(joinEntry);
-    //   _db.SaveChanges();
-    //   var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
-    //   return View("Details", thisEngineer);
-    // } 
-
       public ActionResult Delete(int id)
       {
         Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
